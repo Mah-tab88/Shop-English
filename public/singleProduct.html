@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./build/tailwind.css" />
+    <title>single Product</title>
+  </head>
+  <body class="bg-gray-50 font-serif">
+    <!-- mobile header -->
+    <div class="flex justify-between items-center px-2 mt-8 md:hidden">
+      <div class="bg-white w-8 h-8 flex justify-center items-center rounded-md">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div class="text-base font-medium">iPhone 13 Pro Max - 128GB</div>
+      <div class="bg-white w-8 h-8 rounded-md flex justify-center items-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <!--desktop header   -->
+    <div
+      class="hidden md:flex justify-between items-center px-4 py-5 bg-white 2xl:max-w-screen-2xl mx-auto sticky top-0 shadow-lg z-10"
+    >
+      <div class="flex justify-around items-center flex-1">
+        <div class="logo">
+          <a href="#">
+            <span class="font-black md:text-xl lg:text-2xl text-orange-400"
+              >Digi</span
+            >
+            <span class="font-black md:text-xl lg:text-2xl text-slate-800"
+              >Tize</span
+            >
+          </a>
+        </div>
+        <div class="flex-1 ml-4">
+          <ul class="flex justify-around items-center">
+            <li class="relative py-2">
+              <a
+                href="#"
+                class="text-slate-800 font-bold text-sm lg:text-lg before:hover:opacity-100 before:hover:w-full before:content-[''] before:h-0.5 before:w-0 before:absolute before:left-0 before:bottom-1 before:opacity-0 before:bg-orange-600 before:duration-300 before:transition-all before:ease-in-out"
+                >Home
+              </a>
+            </li>
+            <li class="relative py-2">
+              <a
+                href="#"
+                class="text-slate-800 font-medium text-sm lg:text-lg before:hover:opacity-100 before:hover:w-full before:content-[''] before:h-0.5 before:w-0 before:absolute before:left-0 before:bottom-1 before:opacity-0 before:bg-orange-600 before:duration-300 before:transition-all before:ease-in-out"
+              >
+                Mobile Phone</a
+              >
+            </li>
+            <li class="relative py-2">
+              <a
+                href="#"
+                class="text-slate-800 font-medium text-sm lg:text-lg before:hover:opacity-100 before:hover:w-full before:content-[''] before:h-0.5 before:w-0 before:absolute before:left-0 before:bottom-1 before:opacity-0 before:bg-orange-600 before:duration-300 before:transition-all before:ease-in-out"
+              >
+                Watch</a
+              >
+            </li>
+            <li class="relative py-2">
+              <a
+                href="#"
+                class="text-slate-800 font-medium text-sm lg:text-lg before:hover:opacity-100 before:hover:w-full before:content-[''] before:h-0.5 before:w-0 before:absolute before:left-0 before:bottom-1 before:opacity-0 before:bg-orange-600 before:duration-300 before:transition-all before:ease-in-out"
+              >
+                Loptop</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="flex justify-start items-center bg-stone-100 overflow-hidden pl-3 rounded-md w-[45%]"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-7 w-7 bg-stone-100"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          />
+        </svg>
+
+        <input
+          type="text"
+          class="bg-stone-100 px-3 py-4 outline-none w-full md:text-sm lg:text-base lg:text-md"
+          placeholder="Search Products ..."
+        />
+      </div>
+    </div>
+
+    <!-- content -->
+    <div
+      class="2xl:max-w-screen-2xl mx-auto md:px-7 px-2 py-4 md:py-10 grid grid-cols-12 grid-rows-[50px_minmax(500px,_1fr)] gap-x-5 md:gap-y-5 mb-20"
+    >
+      <!-- sidebar -->
+      <div class="hidden md:block md:col-span-3 xl:col-span-2 row-span-2">
+        <div class="sticky top-28">
+          <!-- grouping and filter -->
+          <div
+            class="bg-white pb-7 rounded-lg max-h-[calc(100vh-140px)] overflow-auto"
+          >
+            <!-- grouping -->
+            <div>
+              <h4
+                class="md:text-lg lg:text-xl font-bold text-orange-400 mb-4 pt-6 pl-3"
+              >
+                Category
+              </h4>
+              <div class="flex flex-col gap-y-2">
+                <div
+                  class="category flex text-md gap-x-1 cursor-pointer hover:bg-blue-50 hover: rounded-md p-1 mx-3"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="md:h-5 md:w-5 lg:h-6 lg:w-6 stroke-gray-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                    />
+                  </svg>
+                  <span class="text-sm lg:text-base text-gray-300">Watch</span>
+                </div>
+                <div
+                  class="category flex text-md gap-x-1 cursor-pointer hover:bg-blue-50 hover: rounded-md p-1 mx-3"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="md:h-5 md:w-5 lg:h-6 lg:w-6 stroke-gray-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                  <span class="text-sm lg:text-base text-gray-300"
+                    >Laptop
+                  </span>
+                </div>
+                <div
+                  class="category flex text-md gap-x-1 cursor-pointer hover:bg-blue-50 hover: rounded-md p-1 mx-3"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="md:h-5 md:w-5 lg:h-6 lg:w-6 stroke-slate-800"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span class="text-sm lg:text-base text-slate-800"
+                    >Mobile Phone</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Filter -->
+            <div class="pl-3 mt-12">
+              <div class="flex flex-col gap-y-1">
+                <!-- brand product-->
+                <div class="filter">
+                  <div class="flex items-center gap-x-2 cursor-pointer">
+                    <span
+                      class="text-sm lg:text-base text-orange-600 hover:text-orange-600"
+                    >
+                      Brand</span
+                    >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4 transition-all duration-500 stroke-orange-600 hover:stroke-orange-600 rotate-180"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5 15l7-7 7 7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <!-- branch brand -->
+                <div
+                  class="flex flex-col gap-y-2 mt-2 mb-4 branch-product"
+                  data-number="1"
+                >
+                  <div
+                    class="flex items-center justify-start mr-3 p-1 rounded-md hover:bg-blue-50"
+                  >
+                    <div
+                      class="md:h-3 md:w-3 lg:h-4 lg:w-4 border-2 border-white ring-1 ring-orange-600 bg-orange-600 rounded-full mr-2 cursor-pointer hover:border-white hover:ring-1 hover:ring-gray-300 hover:bg-gray-300 tick"
+                    ></div>
+                    <span
+                      class="text-slate-800 cursor-pointer text-sm lg:text-base"
+                      >Apple</span
+                    >
+                  </div>
+                  <div
+                    class="flex items-center justify-start mr-3 p-1 rounded-md hover:bg-blue-50"
+                  >
+                    <div
+                      class="md:h-3 md:w-3 lg:h-4 lg:w-4 border-2 border-gray-300 rounded-full mr-2 cursor-pointer hover:border-white hover:ring-1 hover:ring-gray-300 hover:bg-gray-300 tick"
+                    ></div>
+                    <span
+                      class="text-slate-800 text-sm lg:text-base cursor-pointer"
+                      >Samsung</span
+                    >
+                  </div>
+                  <div
+                    class="flex items-center justify-start mr-3 p-1 rounded-md hover:bg-blue-50"
+                  >
+                    <div
+                      class="md:h-3 md:w-3 lg:h-4 lg:w-4 border-2 border-gray-300 rounded-full mr-2 cursor-pointer hover:border-white hover:ring-1 hover:ring-gray-300 hover:bg-gray-300 tick"
+                    ></div>
+                    <span
+                      class="text-slate-800 text-sm lg:text-base cursor-pointer"
+                      >Sony</span
+                    >
+                  </div>
+                  <div
+                    class="flex items-center justify-start mr-3 p-1 rounded-md hover:bg-blue-50"
+                  >
+                    <div
+                      class="md:h-3 md:w-3 lg:h-4 lg:w-4 border-2 border-gray-300 rounded-full mr-2 cursor-pointer hover:border-white hover:ring-1 hover:ring-gray-300 hover:bg-gray-300 tick"
+                    ></div>
+                    <span
+                      class="text-slate-800 text-sm lg:text-base cursor-pointer"
+                      >BlackBerry</span
+                    >
+                  </div>
+                </div>
+                <!-- color product -->
+                <div class="filter">
+                  <div class="flex items-center gap-x-2 cursor-pointer mt-3">
+                    <span
+                      class="text-sm lg:text-base text-slate-80 hover:text-orange-600"
+                      >Color</span
+                    >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4 transition-all duration-500 stroke-slate-800 hover:stroke-orange-600"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5 15l7-7 7 7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <!-- branch color-->
+                <div
+                  class="hidden flex-col gap-y-2 mt-2 mb-4 branch-product"
+                  data-number="1"
+                >
+                  <div
+                    class="flex items-center justify-start mr-3 p-1 rounded-md hover:bg-blue-50"
+                  >
+                    <div
+                      class="md:h-3 md:w-3 lg:h-4 lg:w-4 border-2 border-gray-300 rounded-full mr-2 cursor-pointer hover:border-white hover:ring-1 hover:ring-gray-300 hover:bg-gray-300 tick"
+                    ></div>
+                    <span
+                      class="text-slate-800 text-sm lg:text-base cursor-pointer"
+                      >Purple</span
+                    >
+                  </div>
+                  <div
+                    class="flex items-center justify-start mr-3 p-1 rounded-md hover:bg-blue-50"
+                  >
+                    <div
+                      class="md:h-3 md:w-3 lg:h-4 lg:w-4 border-2 border-gray-300 rounded-full mr-2 cursor-pointer hover:border-white hover:ring-1 hover:ring-gray-300 hover:bg-gray-300 tick"
+                    ></div>
+                    <span
+                      class="text-slate-800 text-sm lg:text-base cursor-pointer"
+                      >Red</span
+                    >
+                  </div>
+                  <div
+                    class="flex items-center justify-start mr-3 p-1 rounded-md hover:bg-blue-50"
+                  >
+                    <div
+                      class="md:h-3 md:w-3 lg:h-4 lg:w-4 border-2 border-gray-300 rounded-full mr-2 cursor-pointer hover:border-white hover:ring-1 hover:ring-gray-300 hover:bg-gray-300 tick"
+                    ></div>
+                    <span
+                      class="text-slate-800 text-sm lg:text-base cursor-pointer"
+                      >Green</span
+                    >
+                  </div>
+                  <div
+                    class="flex items-center justify-start mr-3 p-1 rounded-md hover:bg-blue-50"
+                  >
+                    <div
+                      class="md:h-3 md:w-3 lg:h-4 lg:w-4 border-2 border-gray-300 rounded-full mr-2 cursor-pointer hover:border-white hover:ring-1 hover:ring-gray-300 hover:bg-gray-300 tick"
+                    ></div>
+                    <span
+                      class="text-slate-800 text-sm lg:text-base cursor-pointer"
+                      >Blue</span
+                    >
+                  </div>
+                </div>
+                <!-- price product -->
+                <div class="filter">
+                  <div class="flex items-center gap-x-2 cursor-pointer mt-3">
+                    <span
+                      class="text-sm lg:text-base text-slate-800 hover:text-orange-600"
+                      >Price</span
+                    >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4 transition-all duration-500 stroke-slate-800 hover:stroke-orange-600"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5 15l7-7 7 7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <!-- branch price -->
+                <div
+                  class="hidden flex-col gap-y-2 mt-2 mb-4 branch-product"
+                  data-number="1"
+                >
+                  <div
+                    class="flex items-center justify-start mr-3 p-1 rounded-md hover:bg-blue-50"
+                  >
+                    <div
+                      class="md:h-3 md:w-3 lg:h-4 lg:w-4 border-2 border-gray-300 rounded-full mr-2 cursor-pointer hover:border-white hover:ring-1 hover:ring-gray-300 hover:bg-gray-300 tick"
+                    ></div>
+                    <span
+                      class="text-slate-800 text-sm lg:text-base cursor-pointer"
+                    >
+                      $ 52</span
+                    >
+                  </div>
+                  <div
+                    class="flex items-center justify-start mr-3 p-1 rounded-md hover:bg-blue-50"
+                  >
+                    <div
+                      class="md:h-3 md:w-3 lg:h-4 lg:w-4 border-2 border-gray-300 rounded-full mr-2 cursor-pointer hover:border-white hover:ring-1 hover:ring-gray-300 hover:bg-gray-300 tick"
+                    ></div>
+                    <span
+                      class="text-slate-800 text-sm lg:text-base cursor-pointer"
+                    >
+                      $ 35</span
+                    >
+                  </div>
+                  <div
+                    class="flex items-center justify-start mr-3 p-1 rounded-md hover:bg-blue-50"
+                  >
+                    <div
+                      class="md:h-3 md:w-3 lg:h-4 lg:w-4 border-2 border-gray-300 rounded-full mr-2 cursor-pointer hover:border-white hover:ring-1 hover:ring-gray-300 hover:bg-gray-300 tick"
+                    ></div>
+                    <span
+                      class="text-slate-800 text-sm lg:text-base cursor-pointer"
+                    >
+                      $ 42</span
+                    >
+                  </div>
+                  <div
+                    class="flex items-center justify-start mr-3 p-1 rounded-md hover:bg-blue-50"
+                  >
+                    <div
+                      class="md:h-3 md:w-3 lg:h-4 lg:w-4 border-2 border-gray-300 rounded-full mr-2 cursor-pointer hover:border-white hover:ring-1 hover:ring-gray-300 hover:bg-gray-300 tick"
+                    ></div>
+                    <span
+                      class="text-slate-800 text-sm lg:text-base cursor-pointer"
+                    >
+                      $ 64</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- img sidebar -->
+          <div class="rounded-lg overflow-hidden mt-5">
+            <a href="#">
+              <img src="../assets/images/282291.jpg" alt="watch" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- road way -->
+      <div class="col-span-12 md:col-span-9 xl:col-span-10">
+        <div
+          class="flex justify-start items-center px-2 md:bg-white md:rounded-lg py-3"
+        >
+          <div class="text-sm text-orange-400">Mobile Phone</div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="text-sm text-orange-400">Iphone</div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="text-sm text-slate-800">Iphone 13</div>
+        </div>
+      </div>
+      <!-- product -->
+      <div
+        class="col-span-12 md:col-span-9 xl:col-span-10 md:bg-white md:py-10 md:px-7 lg:px-2"
+      >
+        <div class="px-3 grid grid-cols-12 gap-y-9 lg:gap-x-4 md:px-1">
+          <!-- imaged -->
+          <div class="col-span-12 lg:col-span-4">
+            <div
+              class="w-1/3 mx-auto md:w-full flex justify-center items-center"
+            >
+              <img src="../assets/images/iphone13.png" alt="iphone 13" />
+            </div>
+          </div>
+          <!-- specification -->
+          <div
+            class="bg-white md:bg-gray-50 lg:bg-white col-span-12 lg:col-span-4 py-5 lg:py-0 shadow-md lg:shadow-none w-full rounded-lg"
+          >
+            <div class="flex justify-center lg:justify-start mb-12">
+              <div class="  ">
+                <div class="text-slate-800 text-lg md:text-2xl mb-5">
+                  iPhone 13 Pro Max - 128GB
+                </div>
+                <div class="flex justify-between items-center border-b pb-1">
+                  <!-- star -->
+                  <div class="flex justify-start cursor-pointer">
+                    <span data-id="1">
+                      <svg
+                        data-id="1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 md:h-5 md:w-5 stroke-yellow-400 fill-yellow-400 star"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="0.5"
+                      >
+                        <path
+                          data-id="1"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                        />
+                      </svg>
+                    </span>
+                    <span data-id="2">
+                      <svg
+                        data-id="2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 md:h-5 md:w-5 stroke-yellow-400 fill-yellow-400 star"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="0.5"
+                      >
+                        <path
+                          data-id="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                        />
+                      </svg>
+                    </span>
+                    <span data-id="3">
+                      <svg
+                        data-id="3"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 md:h-5 md:w-5 stroke-yellow-400 fill-yellow-400 star"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="0.5"
+                      >
+                        <path
+                          data-id="3"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                        />
+                      </svg>
+                    </span>
+                    <span data-id="4">
+                      <svg
+                        data-id="4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 md:h-5 md:w-5 stroke-gray-500 star"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="0.5"
+                      >
+                        <path
+                          data-id="4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <!-- rate number -->
+                  <div
+                    class="text-gray-500 text-xs cursor-pointer ml-1 hover:text-gray-700"
+                  >
+                    1,111 rating
+                  </div>
+                  <div
+                    class="text-gray-400 h-5 w-px bg-gray-300 mx-1 md:mx-0"
+                  ></div>
+                  <!-- answer quation -->
+                  <div
+                    class="text-gray-500 text-xs cursor-pointer hover:text-gray-700"
+                  >
+                    1,222 answered question
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white md:bg-gray-50 lg:bg-white rounded-lg">
+              <!-- specification inner-->
+              <div class="flex flex-col gap-y-3">
+                <!-- color -->
+                <div class="flex justify-between items-center mx-2">
+                  <div class="flex items-center justify-start gap-x-1">
+                    <div class="bg-orange-600 w-2 h-2 rounded-full"></div>
+                    <div class="text-sm md:text-base flex gap-x-1 items-center">
+                      <span class="text-slate-800">Color:</span>
+                      <span class=""></span>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-0 relative">
+                    <div
+                      class="flex justify-center items-center btn-color w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 rounded-full bg-red-400 border-2 border-white absolute right-0 md:right-0 cursor-pointer hover:ring-1 md:hover:ring-2 hover:ring-red-400 hover:z-50"
+                      data-color="red"
+                    ></div>
+                    <div
+                      class="flex items-center justify-center btn-color w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 rounded-full bg-purple-400 border-2 border-white absolute right-2 md:right-3 cursor-pointer hover:ring-1 md:hover:ring-2 hover:ring-purple-400 hover:z-50"
+                      data-color="purple"
+                    ></div>
+                    <div
+                      class="flex items-center justify-center btn-color w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 rounded-full bg-blue-400 border-2 border-white absolute right-4 md:right-6 cursor-pointer hover:ring-1 md:hover:ring-2 hover:ring-blue-400 hover:z-50"
+                      data-color="blue"
+                    ></div>
+                    <div
+                      class="flex items-center justify-center btn-color w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 rounded-full bg-green-400 border-2 border-white absolute right-6 md:right-9 cursor-pointer hover:ring-1 md:hover:ring-2 hover:ring-green-400 hover:z-50"
+                      data-color="green"
+                    ></div>
+                  </div>
+                </div>
+                <!-- memory -->
+                <div class="flex justify-start mx-2">
+                  <div class="flex items-center gap-x-1 justify-start">
+                    <div class="bg-orange-600 w-2 h-2 rounded-full"></div>
+                    <p class="text-sm md:text-base text-slate-800">
+                      Memory Storage Capacity:
+                    </p>
+                  </div>
+                  <div class="text-sm md:text-base text-slate-800 pl-1">
+                    128 GB
+                  </div>
+                </div>
+
+                <!-- system -->
+                <div class="flex justify-start mx-2">
+                  <div class="flex items-center gap-x-1 justify-start">
+                    <div class="bg-orange-600 w-2 h-2 rounded-full"></div>
+                    <p class="text-sm md:text-base">Operating System :</p>
+                  </div>
+                  <div class="text-sm md:text-base pl-1">ios</div>
+                </div>
+                <!-- technology -->
+                <div class="flex justify-start mx-2">
+                  <div class="flex items-center gap-x-1 justify-start">
+                    <div class="bg-orange-600 w-2 h-2 rounded-full"></div>
+                    <p class="text-sm md:text-base">Cellular Technology:</p>
+                  </div>
+                  <div class="text-sm md:text-base pl-1">5G 4G LTE</div>
+                </div>
+                <!-- show more -->
+                <div class="">
+                  <div
+                    class="flex-col gap-y-2 hidden bg-gray-100 px-2 py-2 w-full"
+                  >
+                    <!-- count of sim card -->
+                    <div class="flex justify-start">
+                      <div class="flex items-center gap-x-1 justify-start">
+                        <div class="bg-orange-600 w-2 h-2 rounded-full"></div>
+                        <p class="text-sm md:text-base">
+                          SIM card slot count :
+                        </p>
+                      </div>
+                      <div class="text-sm md:text-base pl-1">Single SIM</div>
+                    </div>
+                    <!-- year -->
+                    <div class="flex justify-start">
+                      <div class="flex items-center gap-x-1 justify-start">
+                        <div class="bg-orange-600 w-2 h-2 rounded-full"></div>
+                        <p class="text-sm md:text-base">Year :</p>
+                      </div>
+                      <div class="text-sm md:text-base pl-1">2019</div>
+                    </div>
+                  </div>
+                  <!-- see more button -->
+                  <div
+                    class="flex items-center justify-start cursor-pointer hover:font-bold mx-2"
+                  >
+                    <svg
+                      data-id="3"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 -ml-1.5 fill-orange-600 transition-all duration-500 ease-in-out"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+
+                    <button
+                      class="text-slate-800 text-sm md:text-base specification-see-more"
+                    >
+                      See More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- add to cart -->
+          <div
+            class="col-span-12 lg:col-span-4 p-3 lg:p-0 bg-white md:bg-gray-50 rounded-lg shadow-md"
+          >
+            <div class="p-3 rounded-lg flex flex-col gap-y-6">
+              <!-- price -->
+              <div class="flex items-center gap-x-1 justify-center">
+                <p class="text-slate-800 font-bold text-lg mr-1 md:text-2xl">
+                  Price :
+                </p>
+                <p class="text-slate-800 font-bold text-2xl md:text-2xl">
+                  $175.00
+                </p>
+              </div>
+              <!-- delivery -->
+              <div class="flex flex-col gap-y-2 items-center">
+                <div
+                  class="flex items-center justify-center gap-x-1 md:flex-col md:items-start"
+                >
+                  <div class="flex items-center justify-start gap-x-1">
+                    <div class="bg-orange-600 w-2 h-0.5"></div>
+                    <p class="text-slate-800 text-sm md:text-base">
+                      Free Delivery:
+                    </p>
+                  </div>
+                  <p
+                    class="text-slate-800 text-sm md:text-base font-bold md:ml-4"
+                  >
+                    Monday, July 23
+                  </p>
+                </div>
+                <div
+                  class="flex items-center justify-center gap-x-1 md:flex-col md:items-start"
+                >
+                  <div class="flex items-center justify-start gap-x-1">
+                    <div class="bg-orange-600 w-2 h-0.5"></div>
+                    <p class="text-slate-800 text-sm md:text-base">
+                      Fastest delivery:
+                    </p>
+                  </div>
+                  <p
+                    class="text-slate-800 text-sm md:text-base font-bold md:ml-4"
+                  >
+                    Sunday, July 22
+                  </p>
+                </div>
+              </div>
+              <!-- location -->
+              <div class="flex justify-center items-center gap-x-1">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 md:h-5 md:w-5 stroke-orange-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                </span>
+                <div>
+                  <a href="#" class="text-slate-800 text-sm md:text-base"
+                    >select delivery location</a
+                  >
+                </div>
+              </div>
+              <!-- sold and ship -->
+              <div>
+                <div class="flex items-center justify-center gap-x-1">
+                  <div class="bg-orange-600 w-2 h-0.5"></div>
+                  <p class="text-slate-800 text-sm">Fastest delivery:</p>
+                  <p class="text-slate-800 text-sm text-bold">Ships from</p>
+                </div>
+                <div class="flex items-center justify-center gap-x-1">
+                  <div class="bg-orange-600 w-2 h-0.5"></div>
+                  <p class="text-slate-800 text-sm">Sold by:</p>
+                  <p>
+                    <a href="#" class="text-slate-800 text-sm">AE Cells</a>
+                  </p>
+                </div>
+              </div>
+              <!-- buy or add -->
+              <div class="flex flex-col mx-auto gap-y-4">
+                <button
+                  class="text-white outline-none border-white bg-orange-600 rounded-3xl py-1.5 px-8 cursor-pointer ring-2 ring-orange-600 hover:ring-offset-2 add-toCart"
+                >
+                  Add to Cart
+                </button>
+                <button
+                  class="text-white outline-none border-white bg-orange-600 rounded-3xl py-1.5 cursor-pointer ring-2 ring-orange-600 hover:ring-offset-2"
+                >
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- about this item -->
+          <!-- about this item -->
+          <div class="col-span-12">
+            <div
+              class="bg-white border-2 border-gray-50 rounded-lg p-3 shadow-md md:shadow-sm"
+            >
+              <!-- btns -->
+              <div
+                class="flex justify-evenly p-1 mt-2 gap-x-1 bg-gray-100 border-1 border-white rounded-3xl mb-5"
+              >
+                <button
+                  class="btn-about-item text-sm md:text-lg text-slate-800 flex-1 py-1 md:py-2 rounded-3xl border-2 border-gray-100 bg-white shadow-md hover:shadow-md hover:text-slate-800 hover:border-white"
+                  data-btn="design"
+                >
+                  Design
+                </button>
+                <button
+                  class="btn-about-item text-sm md:text-lg text-gray-400 flex-1 py-1 md:py-2 rounded-3xl border-2 border-gray-100 hover:shadow-md hover:text-slate-800 hover:border-white"
+                  data-btn="camera"
+                >
+                  Camera
+                </button>
+                <button
+                  class="btn-about-item text-sm md:text-lg text-gray-400 flex-1 py-1 md:py-2 rounded-3xl border-2 border-gray-100 hover:shadow-md hover:text-slate-800 hover:border-white"
+                  data-btn="battery"
+                >
+                  Battery
+                </button>
+              </div>
+              <!-- description -->
+              <div>
+                <div class="flex items-baseline gap-x-1 ml-2">
+                  <div>
+                    <div class="w-2 h-2 rounded-full bg-orange-600"></div>
+                  </div>
+
+                  <div class="desc-about-item" data-btn="design">
+                    <p class="text-sm md:text-base text-slate-800 text-justify">
+                      Design ... Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Ratione, earum a exercitationem iure
+                      quae adipisci labore asperiores ipsa alias saepe corporis
+                      dicta possimus iusto quod numquam beatae. At vero id amet
+                      rerum similique quaerat exercitationem dignissimos saepe
+                      adipisci minima doloremque quae reiciendis temporibus
+                      libero eos aperiam, sunt molestiae placeat sint. Lorem
+                      ipsum dolor sit amet consectetur adipisicing elit. Placeat
+                      voluptatibus exercitationem magnam doloremque, similique
+                      blanditiis suscipit! Et nam porro fuga!
+                    </p>
+                    <span class="flex justify-center items-center mt-6">
+                      <img
+                        src="../assets/images/design.png"
+                        alt="phone design"
+                      />
+                    </span>
+                  </div>
+                  <div class="hidden desc-about-item" data-btn="battery">
+                    <p
+                      class="text-sm md:text-base text-slate-800 text-justify mb-24"
+                    >
+                      Battery... Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Provident veritatis necessitatibus, in
+                      maiores ipsa quia temporibus voluptate omnis nesciunt
+                      voluptatum eligendi excepturi architecto illo labore ullam
+                      laboriosam quas. Neque sit rerum fugiat ad? Dicta
+                      reprehenderit blanditiis, maiores, incidunt eius non
+                      voluptatem ipsam, dolore saepe est facere distinctio
+                      laudantium illo doloremque fugit ullam asperiores
+                      perferendis sequi labore. Quod modi unde exercitationem,
+                      nisi enim amet, libero, eaque dolor saepe ex consequuntur
+                      explicabo.
+                    </p>
+                    <span class="flex justify-center items-center mt-3">
+                      <img src="../assets/images/battery.png" alt="" />
+                    </span>
+                  </div>
+                  <div class="hidden desc-about-item" data-btn="camera">
+                    <p
+                      class="text-sm md:text-base text-slate-800 text-justify mb-5"
+                    >
+                      camera... Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Assumenda recusandae at fuga, quis minus
+                      voluptatibus aliquid dignissimos labore doloremque quas
+                      earum aperiam. Dolorum reiciendis ratione sint laboriosam
+                      aut. Tempora a magnam, labore deleniti doloribus veniam
+                      nostrum porro blanditiis numquam excepturi sequi ipsa
+                      autem aperiam nam et iste dolorum dolore assumenda
+                      repellendus eaque praesentium in saepe neque fugiat.
+                      Aliquam quo ad sint voluptatem explicabo inventore fuga,
+                      laborum voluptates autem magnam mollitia laudantium vitae
+                      distinctio magni eum, culpa architecto, perspiciatis porro
+                      commodi corporis nemo similique sed! Laborum officia quas
+                      harum. Quidem, laudantium incidunt sequi odio ut atque,
+                      accusamus voluptatibus veniam vel eveniet doloribus
+                      perferendis necessitatibus dicta vero! Voluptate ad, ullam
+                      molestias odit totam aut magnam temporibus quisquam eos
+                      molestiae quibusdam, sed quidem!
+                    </p>
+                    <span class="flex justify-center items-center">
+                      <img src="../assets/images/camera.png" alt="camera" />
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="items-center gap-x-1 justify-start hidden"
+                  data-btn="battery"
+                >
+                  <div class="bg-orange-600 w-2 h-2 rounded-full"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- reviwe -->
+          <div class="col-span-12">
+            <div
+              class="flex flex-col justify-center border-2 border-gray-50 items-start bg-white p-3 rounded-lg shadow-md md:shadow-sm"
+            >
+              <h3 class="text-slate-800 font-bold md:text-xl mb-2">Review</h3>
+              <div class="flex items-baseline gap-x-1 justify-start">
+                <div>
+                  <div class="bg-orange-600 w-2 h-2 rounded-full"></div>
+                </div>
+                <p class="text-sm md:text-base text-slate-800 text-justify">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Corporis libero enim dolore velit magni voluptas laborum, quam
+                  quod maiores at.
+                </p>
+              </div>
+              <div class="">
+                <div class="flex justify-start items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 fill-orange-600 transition-all duration-500 ease-in-out"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <p
+                    class="text-slate-800 review-see-more cursor-pointer hover:font-bold"
+                  >
+                    See more ...
+                  </p>
+                </div>
+                <p
+                  class="transition-all duration-500 ease-in-out opacity-0 my-2 p-2 bg-gray-50 rounded-md text-sm md:text-base text-slate-800 ml-2 text-justify"
+                >
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+                  harum dolorum repellat? Ipsam fugiat accusantium illo totam,
+                  esse, nisi dicta nihil ab, expedita quos ea assumenda nulla
+                  deleniti? Voluptatem, quam? Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Fuga illo vitae dolor
+                  necessitatibus odit rem distinctio unde, fugiat dicta esse.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--mobile footer  -->
+    <div
+      class="flex md:hidden fixed bottom-0 right-0 left-0 w-full bg-white justify-around items-center py-3 rounded-t-lg border-t shadow-[0_-4px_8px_0_rgba(0,0,0,.1) py-1]"
+    >
+      <div class="flex justify-center items-center item-footer">
+        <span
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 fill-slate-800"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+            />
+          </svg>
+        </span>
+        <span class="fill-slate-800 text-xs mr-1">Home</span>
+      </div>
+      <div class="flex justify-center items-center item-footer">
+        <span
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 fill-gray-400"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+            />
+          </svg>
+        </span>
+        <span class="text-xs mr-1 hidden">Category</span>
+      </div>
+      <div class="flex justify-center items-center item-footer">
+        <span
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 fill-gray-400"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </span>
+        <span class="text-xs mr-1 hidden">Shopping Cart</span>
+      </div>
+      <div class="flex justify-center items-center item-footer">
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 fill-gray-400"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </span>
+        <span class="text-xs mr-1 hidden">News</span>
+      </div>
+    </div>
+
+    <!-- desktop footer  -->
+    <div
+      class="hidden md:flex justify-between px-7 mt-9 py-8 bg-white 2xl:max-w-screen-2xl mx-auto bottom-0 right-0 w-full"
+    >
+      <div class="w-1/2">
+        <div class="flex items-center mb-7">
+          <span class="font-black md:text-xl lg:text-2xl text-orange-400"
+            >Degi</span
+          >
+          <span class="font-black md:text-xl lg:text-2xl text-slate-800"
+            >Tize</span
+          >
+          <div class="h-0.5 w-12 ml-2 rounded-md bg-orange-400"></div>
+        </div>
+        <div class="md:text-base lg:text-xl text-slate-800">
+          ciis ad sit repellendus itaque consequatur incidunt iste. Alias animi
+          in dolores saepe harum doloremque laudantium, dicta aliquam sit.
+          <br />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+          asperiores.
+          <span class="text-orange-400"> 222,333</span>
+          Lorem ipsum dolor sit amet consectetur.
+        </div>
+      </div>
+      <div class=" ">
+        <h5 class="md:text-lg lg:text-2xl pb-4 font-bold text-slate-800">
+          Product
+        </h5>
+        <ul class="flex flex-col gap-y-3">
+          <li>
+            <a
+              href="#"
+              class="md:text-sm lg:text-lg text-slate-800 pr-1 hover:text-orange-600"
+              >Mobile Phone</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="md:text-sm lg:text-lg text-slate-800 pr-1 hover:text-orange-600"
+              >laptop</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="md:text-sm lg:text-lg text-slate-800 pr-1 hover:text-orange-600"
+              >Watch</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="w-1/5" dir="ltr">
+        <div class="rounded-lg overflow-hidden">
+          <img src="../assets/images/location.jpg" alt="location" />
+        </div>
+        <div class="flex items-center mt-7 text-slate-800">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-3 w-3 lg:h-4 lg:w-4 cursor-pointer hover:stroke-orange-600 stroke-orange-600"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+            />
+          </svg>
+          <span>1111111</span>
+        </div>
+        <span class="mt-2 text-slate-800">Info@digitize.com</span>
+      </div>
+    </div>
+
+    <script src="./build/script1.js"></script>
+  </body>
+</html>
